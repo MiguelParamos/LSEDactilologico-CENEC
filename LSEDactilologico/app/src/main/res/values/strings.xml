@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LSE Dactilologico</string>
+    <string name="Creditos">Creados por los alumnos de 2DAM de Cenec Málaga</string>
+    <string name="Cambiar">Cambiar</string>
+    <string name="txtEscrito">Escribe el texto que quieres traducir</string>
+    <string name="desLogo">Este es mi logo</string>
+</resources>
