@@ -3,4 +3,23 @@
     <string name="Creditos">Creado por los alumnos de 2DAM de Cenec Málaga</string>
     <string name="Cambiar">Cambiar</string>
     <string name="txtEscrito">Escribe el texto que quieres traducir</string>
+    <string name="txtSobreNosotros">Este proyecto esta hecho por los alumnos de 2ºDAM de Cenec Málaga</string>
+    <string name="txtContribuidores">Los contribuidores son:</string>
+    <string name="descripcionFotoContribuidor">Foto de un contribuidor</string>
+    <string name="txtAyudanos">Ayudanos a mejorar</string>
+    <string name="txtAyudanos2">Ayudanos a mejorar grabando un audio</string>
+    <string name="txtGrabar">Grabar</string>
+    <string name="permisoDenegado">Me has denegado el permiso</string>
+    <string name="sobreNosotros">Esta aplicación se ha hecho con el esfuerzo conjunto de la clase
+    de 2DAM-M en el centro educativo CENEC Málaga.</string>
+    <string name="contribucionesDe">Contribuciones de:</string>
+    <string name="nico">Nico Fernández</string>
+    <string name="kevin">Kevin Rääk</string>
+    <string name="ayudanos">Ayúdanos a mejorar</string>
+    <string name="envianos">Envíanos tu mensaje de voz para indicarnos cómo podríamos mejorar nuestra app</string>
+    <string name="Grabar">Grabar</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Reproducir">Reproducir</string>
+    <string name="Parar">Parar</string>
+    <string name="Limpiar">Limpiar</string>
 </resources>

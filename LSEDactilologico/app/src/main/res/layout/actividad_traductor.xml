@@ -4,72 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActividadTraductor">
+    tools:context="es.cenecmalaga.lsedactilologico.actividades.ActividadTraductor">
 
     <TextView
 
         android:id="@+id/creditosAlumnos"
-        android:layout_width="338dp"
+        android:layout_width="203dp"
         android:layout_height="65dp"
         android:layout_gravity="center"
-
-
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="37dp"
         android:text="@string/Creditos"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/rojoRosa"
         android:textSize="18sp"
+        android:onClick="irSobreNosotros"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
 
     <ImageView
 
         android:id="@+id/imagenLogo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="422dp"
+        android:layout_height="91dp"
         android:src="@drawable/lsedactilologico_cenec"
-        app:layout_constraintBottom_toTopOf="@+id/creditosAlumnos"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="323dp"
-        android:layout_marginTop="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <LinearLayout
-            android:id="@+id/contenedor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        </LinearLayout>
-    </ScrollView>
 
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="347dp"
         android:layout_height="144dp"
-
-
         android:layout_marginTop="136dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,8 +54,8 @@
 
         <EditText
             android:id="@+id/txtTraducir"
-            android:layout_width="wrap_content"
-            android:layout_height="76dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
 
             android:autofillHints="no"
@@ -95,23 +71,54 @@
 
         <Button
             android:id="@+id/btnTraducir"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="#AA3939"
-            android:gravity="start"
-            android:onClick="TraducirTexto"
+            android:onClick="traducir"
             android:text="@string/Cambiar"
-
+            android:textAlignment="center"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="1dp"
+            tools:ignore="RtlCompat" />
 
-            app:layout_constraintHorizontal_bias="0.835"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.072" />
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:onClick="limpiar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:background="#AA5050"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            android:text="@string/Limpiar"
+            />
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="105dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="37dp"
+        android:background="#AA3939"
+        android:onClick="irAMejorar"
+        android:padding="5dp"
+        android:text="@string/ayudanos"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
