@@ -1,16 +1,28 @@
 package es.cenecmalaga.lsedactilologico.adapters_holders
 
 import android.app.Activity
+import android.content.Context
+import android.graphics.drawable.Drawable
+import android.view.Gravity
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.NicolasFernandez.lsedactilologico.R
+import com.soepic.sefancytoast.FancyToast
 
-class RecyclerViewTraductorAdapter (val actividad :Activity, var datos :ArrayList<Char>): RecyclerView.Adapter<HolderTraductor>() {
+
+class RecyclerViewTraductorAdapter(val actividad: Activity, var datos: ArrayList<Char>): RecyclerView.Adapter<HolderTraductor>() {
     /*
     Metodo que infla
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderTraductor {
-       return HolderTraductor(actividad.layoutInflater.inflate(R.layout.elementos_recycle,parent,false))
+       return HolderTraductor(
+           actividad.layoutInflater.inflate(
+               R.layout.elementos_recycle,
+               parent,
+               false
+           )
+       )
     }
 
 
@@ -22,123 +34,42 @@ class RecyclerViewTraductorAdapter (val actividad :Activity, var datos :ArrayLis
         return datos.size
     }
     override fun onBindViewHolder(holder: HolderTraductor, position: Int) {
+        try {
 
-        when(datos.get(position)){
-            'a'-> {
-                holder.imagen.setImageResource(R.drawable.aa)
+            when (datos.get(position)) {
+                'a' -> {
+                    holder.imagen.setImageDrawable(getDrawable("aa"))
+                }
+                'ñ' -> {
+                    holder.imagen.setImageDrawable(getDrawable("enie"))
 
-            }
-            'b'-> {
-
-                holder.imagen.setImageResource(R.drawable.b)
-
-            }
-
-            'c'->{
-
-                holder.imagen.setImageResource(R.drawable.c)
-
-            }
-            'd'->{
-                holder.imagen.setImageResource(R.drawable.d)
-
-            }
-            'e'->{
-                holder.imagen.setImageResource(R.drawable.e)
-            }
-            'f'->{
-                holder.imagen.setImageResource(R.drawable.f)
-
-            }
-            'g'->{
-                holder.imagen.setImageResource(R.drawable.g)
-            }
-            'h'->{
-                holder.imagen.setImageResource(R.drawable.h)
-            }
-            'i'->{
-                holder.imagen.setImageResource(R.drawable.i)
-
-            }
-            'j'->{
-                holder.imagen.setImageResource(R.drawable.j)
-            }
-            'k'->{
-                holder.imagen.setImageResource(R.drawable.k)
-            }
-            'l'->{
-                holder.imagen.setImageResource(R.drawable.l)
-            }
-            //  'll'->imagen.setImageResource(R.drawable.ll) corregir esto de la ll
-            'ñ'->{
-                holder.imagen.setImageResource(R.drawable.enie)
-            }
-            'n'->{
-                holder.imagen.setImageResource(R.drawable.n)
-
-            }
-            'm'->{
-                holder.imagen.setImageResource(R.drawable.m)
-
-            }
-            'o'->{
-                holder.imagen.setImageResource(R.drawable.o)
+                }
+                ' ' -> {
+                    holder.imagen.setImageResource(R.drawable.espacio)
+                }
+                else -> {
+                    holder.imagen.setImageDrawable(getDrawable("" + datos.get(position)))
+                }
 
 
             }
-            'p'-> {
-                holder.imagen.setImageResource(R.drawable.p)
-            }
-            'q'->{
-
-                holder.imagen.setImageResource(R.drawable.q)
-
-            }
-            'r'->{
-                holder.imagen.setImageResource(R.drawable.r)
-
-            }
-            // 'rr'->imagen.setImageResource(R.drawable.rr)
-            's'->{
-                holder.imagen.setImageResource(R.drawable.s)
-
-            }
-            't'->{
-                holder.imagen.setImageResource(R.drawable.t)
-
-            }
-            'u'-> {
-                holder.imagen.setImageResource(R.drawable.u)
-
-            }
-            'v'->{
-                holder.imagen.setImageResource(R.drawable.v)
-
-            }
-
-            'w'->{
-                holder.imagen.setImageResource(R.drawable.w)
-
-            }
-            'x'->{
-                holder.imagen.setImageResource(R.drawable.x)
-
-            }
-            'y'->{
-                holder.imagen.setImageResource(R.drawable.y)
-
-            }
-            'z'->{
-                holder.imagen.setImageResource(R.drawable.z)
-
-
-            }
-            ' '->{
-            holder.imagen.setImageResource(R.drawable.ic_launcher_background)
-            }
-
-
+        }catch (e:Exception){
+            FancyToast() // context
+                .with(actividad) // gravity of FancyToast
+                .setGravity(Gravity.BOTTOM, 0, 0) // set custom icon resource
+                .setIcon(R.drawable.error_sign) // set text for FancyToast
+                .setText(actividad.resources.getString(R.string.valorNoValido)+" "+datos.get(position)) // corner radius of FancyToast view
+                .cornerRadius(16f) // show/hide icon
+                .hideIcon(false) // finally show the FancyToast
+                .show()
+            holder.imagen.setImageResource(R.drawable.error_sign)
         }
+    }
+
+    fun getDrawable(name: String?): Drawable? {
+        val resourceId: Int = actividad.getResources()
+            .getIdentifier(name, "drawable", actividad.getPackageName())
+        return ContextCompat.getDrawable(actividad,resourceId)
     }
 
 }

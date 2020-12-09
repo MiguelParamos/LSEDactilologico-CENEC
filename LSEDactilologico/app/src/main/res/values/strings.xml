@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">LSE Dactilológico - CENEC Málaga</string>
-    <string name="Creditos">Creado por los alumnos de 2DAM de Cenec Málaga</string>
-    <string name="Cambiar">Cambiar</string>
-    <string name="txtEscrito">Escribe el texto que quieres traducir</string>
+    <string name="creditos">Creado por los alumnos de 2DAM de Cenec Málaga</string>
+    <string name="cambiar">Traducir</string>
+    <string name="txtEscrito">Frase a traducir a LSE</string>
     <string name="txtSobreNosotros">Este proyecto esta hecho por los alumnos de 2ºDAM de Cenec Málaga</string>
     <string name="txtContribuidores">Los contribuidores son:</string>
     <string name="descripcionFotoContribuidor">Foto de un contribuidor</string>
@@ -17,9 +17,13 @@
     <string name="kevin">Kevin Rääk</string>
     <string name="ayudanos">Ayúdanos a mejorar</string>
     <string name="envianos">Envíanos tu mensaje de voz para indicarnos cómo podríamos mejorar nuestra app</string>
-    <string name="Grabar">Grabar</string>
-    <string name="Guardar">Guardar</string>
-    <string name="Reproducir">Reproducir</string>
-    <string name="Parar">Parar</string>
-    <string name="Limpiar">Limpiar</string>
+    <string name="grabar">Grabar</string>
+    <string name="guardar">Guardar</string>
+    <string name="reproducir">Reproducir</string>
+    <string name="parar">Parar</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="textoIntroduceATraducir">Esta aplicación traduce cualquier frase breve en español en Lenguaje de Sordos Español (LSE). Introduce el texto a traducir:</string>
+    <string name="textoTraducido">Este es el texto traducido:</string>
+    <string name="nadaQueTraducir">Introduce una frase para poder traducirla.</string>
+    <string name="valorNoValido">Carácter no válido para su traducción:</string>
 </resources>

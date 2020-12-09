@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/Guardar"
+        android:text="@string/guardar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonGrabar"
         app:layout_constraintTop_toBottomOf="@+id/textoEnvianos" />
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/Grabar"
+        android:text="@string/grabar"
         app:layout_constraintEnd_toStartOf="@id/botonGuardar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoEnvianos" />
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/Reproducir"
+        android:text="@string/reproducir"
         app:layout_constraintEnd_toStartOf="@id/botonParar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonGrabar" />
@@ -66,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/Parar"
+        android:text="@string/parar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botonReproducir"
         app:layout_constraintTop_toBottomOf="@+id/botonGuardar" />
@@ -76,7 +76,7 @@
         android:layout_width="112dp"
         android:layout_height="159dp"
         android:src="@drawable/micrec"
-        android:contentDescription="@string/Grabar"
+        android:contentDescription="@string/grabar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
         android:layout_width="112dp"
         android:layout_height="159dp"
         android:src="@drawable/speaker"
-        android:contentDescription="@string/Reproducir"
+        android:contentDescription="@string/reproducir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

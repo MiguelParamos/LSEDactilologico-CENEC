@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorPrincipal"
+    android:background="@drawable/fondo_gradiente_lista"
+    tools:context="es.cenecmalaga.lsedactilologico.actividades.ActividadTraductor" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/contenedorAboutAyuda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:id="@+id/imagenLogo"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:contentDescription="@string/app_name"
+                android:maxHeight="200dp"
+                android:src="@drawable/lsedactilologico_cenec"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/contenedorBuscador"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imagenLogo">
+
+                <EditText
+                    android:id="@+id/campoTraduccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="yes"
+                    android:background="@drawable/estilo_edittext"
+                    android:hint="@string/txtEscrito"
+                    android:inputType="text"
+                    android:textColor="@color/colorAccent"
+                    android:theme="@style/editTextGeneral" />
+
+                <LinearLayout
+                    android:id="@+id/contenedorBotonesBuscador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnTraducir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/estilo_botonazul_izda_abajo"
+                        android:onClick="traducir"
+                        android:text="@string/cambiar"
+                        tools:ignore="RtlCompat" />
+
+                    <Button
+                        android:id="@+id/btnLimpiar"
+                        style="@style/botonAmarillo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/estilo_botonamarillo_dcha_abajo"
+                        android:onClick="limpiar"
+                        android:text="@string/limpiar" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/labelEscribeTexto"
+                style="@style/textViewGeneral.textViewActividad"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="@string/textoIntroduceATraducir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/labelTraduccionRealizada"
+                style="@style/textViewGeneral.textViewActividad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/textoTraducido"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTraduccion"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelTraduccionRealizada"></androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contenedorAboutAyuda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+
+            android:id="@+id/botonSobreNosotros"
+            style="@style/botonAmarillo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="irSobreNosotros"
+            android:background="@drawable/estilo_botonamarillo_izda_arriba"
+            android:text="@string/creditos" />
+
+        <Button
+            android:id="@+id/botonAyudanosAMejorar"
+            android:layout_width="match_parent"
+            android:background="@drawable/estilo_botonazul_dcha_arriba"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:onClick="irAMejorar"
+            android:text="@string/ayudanos"
+            style="@style/botonAzul.textoPequenio" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

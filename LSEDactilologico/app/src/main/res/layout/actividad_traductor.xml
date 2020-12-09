@@ -2,121 +2,138 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorPrincipal"
+    android:background="@drawable/fondo_gradiente_lista"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="es.cenecmalaga.lsedactilologico.actividades.ActividadTraductor">
 
-    <TextView
-
-        android:id="@+id/creditosAlumnos"
-        android:layout_width="203dp"
-        android:layout_height="65dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="51dp"
-        android:layout_marginBottom="37dp"
-        android:text="@string/Creditos"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        android:onClick="irSobreNosotros"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
-
     <ImageView
-        android:contentDescription="@string/app_name"
         android:id="@+id/imagenLogo"
-        android:layout_width="422dp"
-        android:layout_height="91dp"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/app_name"
         android:layout_margin="10dp"
+        android:maxHeight="200dp"
+        android:layout_marginHorizontal="30dp"
         android:src="@drawable/lsedactilologico_cenec"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="347dp"
-        android:layout_height="144dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginBottom="1dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/labelEscribeTexto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/textoIntroduceATraducir"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenLogo">
-
-
-        <EditText
-            android:id="@+id/txtTraducir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-
-            android:autofillHints="no"
-            android:hint="@string/txtEscrito"
-            android:inputType="text"
-            android:textColor="@color/colorAccent"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.219"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/creditosAlumnos" />
-
-
-        <Button
-            android:id="@+id/btnTraducir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="traducir"
-            android:text="@string/Cambiar"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_margin="1dp"
-            tools:ignore="RtlCompat" />
-
-        <Button
-            android:id="@+id/btnLimpiar"
-            android:onClick="limpiar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_margin="1dp"
-            android:text="@string/Limpiar"
-            />
-
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="105dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginBottom="37dp"
-        android:onClick="irAMejorar"
-        android:padding="5dp"
-        android:text="@string/ayudanos"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        style="@style/textViewGeneral.textViewActividad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <LinearLayout
+        android:id="@+id/contenedorBuscador"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="7dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/labelEscribeTexto">
+
+        <EditText
+            android:id="@+id/campoTraduccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="yes"
+            android:theme="@style/editTextGeneral"
+            android:hint="@string/txtEscrito"
+            android:inputType="text"
+            android:background="@drawable/estilo_edittext"
+            android:textColor="@color/colorAccent" />
+
+        <LinearLayout
+            android:id="@+id/contenedorBotonesBuscador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTraducir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:onClick="traducir"
+                android:background="@drawable/estilo_botonazul_izda_abajo"
+                android:text="@string/cambiar"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/btnLimpiar"
+                style="@style/botonAmarillo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="limpiar"
+                android:background="@drawable/estilo_botonamarillo_dcha_abajo"
+                android:text="@string/limpiar" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labelTraduccionRealizada"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:text="@string/textoTraducido"
+        style="@style/textViewGeneral.textViewActividad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedorBuscador" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTraduccion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/contenedorAboutAyuda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTraduccionRealizada">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/contenedorAboutAyuda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+
+            android:id="@+id/botonSobreNosotros"
+            style="@style/botonAmarillo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="irSobreNosotros"
+            android:background="@drawable/estilo_botonamarillo_izda_arriba"
+            android:text="@string/creditos" />
+
+        <Button
+            android:id="@+id/botonAyudanosAMejorar"
+            android:layout_width="match_parent"
+            android:background="@drawable/estilo_botonazul_dcha_arriba"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:onClick="irAMejorar"
+            android:text="@string/ayudanos"
+            style="@style/botonAzul.textoPequenio" />
+    </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
