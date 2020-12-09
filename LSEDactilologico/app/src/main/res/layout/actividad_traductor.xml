@@ -17,7 +17,7 @@
         android:text="@string/Creditos"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@color/rojoRosa"
+        android:textColor="@color/colorAccent"
         android:textSize="18sp"
         android:onClick="irSobreNosotros"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -27,10 +27,11 @@
         app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
 
     <ImageView
-
+        android:contentDescription="@string/app_name"
         android:id="@+id/imagenLogo"
         android:layout_width="422dp"
         android:layout_height="91dp"
+        android:layout_margin="10dp"
         android:src="@drawable/lsedactilologico_cenec"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +62,7 @@
             android:autofillHints="no"
             android:hint="@string/txtEscrito"
             android:inputType="text"
-            android:textColor="@color/morado"
+            android:textColor="@color/colorAccent"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.219"
@@ -73,7 +74,6 @@
             android:id="@+id/btnTraducir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#AA3939"
             android:onClick="traducir"
             android:text="@string/Cambiar"
             android:textAlignment="center"
@@ -87,7 +87,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:background="#AA5050"
             android:textStyle="bold"
             android:layout_margin="1dp"
             android:text="@string/Limpiar"
@@ -102,7 +101,6 @@
         android:layout_height="51dp"
         android:layout_marginTop="51dp"
         android:layout_marginBottom="37dp"
-        android:background="#AA3939"
         android:onClick="irAMejorar"
         android:padding="5dp"
         android:text="@string/ayudanos"

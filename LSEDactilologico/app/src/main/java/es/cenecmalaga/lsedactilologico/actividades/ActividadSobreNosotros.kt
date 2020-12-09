@@ -14,13 +14,15 @@ class ActividadSobreNosotros : AppCompatActivity() {
 
         val nombres:ArrayList<String> = ArrayList<String>()
 
-        nombres.add("Nicolas Fernandez Heredia")
+        nombres.add("Nicolás Fernandez Heredia")
         nombres.add("Kevin Raak")
         nombres.add("Rafa Carrión Ponce")
+        nombres.add("Francisco España Quintana")
         val imagenesContribuidores:ArrayList<String> = ArrayList<String>()
         imagenesContribuidores.add("nico")
         imagenesContribuidores.add("kevin")
         imagenesContribuidores.add("rafa")
+        imagenesContribuidores.add("francisco")
 
         val contenedorRecycler: RecyclerView = findViewById(R.id.listaContribuidores)
 

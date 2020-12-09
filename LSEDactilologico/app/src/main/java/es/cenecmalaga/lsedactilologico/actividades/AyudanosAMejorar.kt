@@ -36,9 +36,9 @@ class AyudanosAMejorar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ayudanos_a_mejorar)
-
-        pathSave =
-                Environment.getExternalStorageDirectory().toString() + "/grabacion.3gp"
+        val externalStorageVolumes: Array<out File> =
+        ContextCompat.getExternalFilesDirs(applicationContext, null)
+        pathSave ="${externalStorageVolumes[0].absolutePath}/grabacion.3gp"
 
         if (!checkPermissionFromDevice()) {
             requestPermission()
@@ -113,10 +113,9 @@ class AyudanosAMejorar : AppCompatActivity() {
                 botonReproducir.isEnabled = true
                 imagenReprocudiendo.visibility = View.GONE
 
-                if (mediaPlayer != null){
-                    mediaPlayer.stop()
-                    mediaPlayer.release()
-                }
+                mediaPlayer.stop()
+                mediaPlayer.release()
+
             }
     }
 

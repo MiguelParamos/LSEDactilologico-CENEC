@@ -32,6 +32,9 @@ class RecyclerViewSobreNostrosAdapter (val actividad: Activity, val nombresLista
         if (fotosLista.get(position).equals("rafa")){
             holder.foto.setImageResource(R.drawable.rafa)
         }
+        if (fotosLista.get(position).equals("francisco")){
+            holder.foto.setImageResource(R.drawable.francisco)
+        }
 
         holder.nombre.setText(nombresLista.get(position))
     }
