@@ -3,16 +3,15 @@
     <string name="creditos">Creado por los alumnos de 2DAM de Cenec Málaga</string>
     <string name="cambiar">Traducir</string>
     <string name="txtEscrito">Frase a traducir a LSE</string>
-    <string name="txtSobreNosotros">Este proyecto esta hecho por los alumnos de 2ºDAM de Cenec Málaga</string>
-    <string name="txtContribuidores">Los contribuidores son:</string>
+    <string name="txtSobreNosotros">Esta aplicación es gratuíta y de código abierto, se ha hecho con el esfuerzo conjunto de la clase
+    de 2DAM-M en el centro educativo CENEC Málaga, durante el curso 2020-2021.</string>
+    <string name="txtContribuidores">Contribuyeron a su desarrollo:</string>
     <string name="descripcionFotoContribuidor">Foto de un contribuidor</string>
     <string name="txtAyudanos">Ayudanos a mejorar</string>
-    <string name="txtAyudanos2">Ayudanos a mejorar grabando un audio</string>
-    <string name="txtGrabar">Grabar</string>
+    <string name="tituloGrabar">Envíanos un audio</string>
+    <string name="tituloMsgTexto">Envíanos un mensaje de texto</string>
     <string name="permisoDenegado">Me has denegado el permiso</string>
-    <string name="sobreNosotros">Esta aplicación se ha hecho con el esfuerzo conjunto de la clase
-    de 2DAM-M en el centro educativo CENEC Málaga.</string>
-    <string name="contribucionesDe">Contribuciones de:</string>
+    <string name="contribucionesDe">Han contribuído a desarrollar esta app:</string>
     <string name="nico">Nico Fernández</string>
     <string name="kevin">Kevin Rääk</string>
     <string name="ayudanos">Ayúdanos a mejorar</string>
@@ -22,8 +21,21 @@
     <string name="reproducir">Reproducir</string>
     <string name="parar">Parar</string>
     <string name="limpiar">Limpiar</string>
-    <string name="textoIntroduceATraducir">Esta aplicación traduce cualquier frase breve en español en Lenguaje de Sordos Español (LSE). Introduce el texto a traducir:</string>
+    <string name="textoIntroduceATraducir">Esta aplicación traduce cualquier frase breve en español a Lenguaje de Signos Español (LSE) Dactilológico. Introduce el texto a traducir:</string>
     <string name="textoTraducido">Este es el texto traducido:</string>
     <string name="nadaQueTraducir">Introduce una frase para poder traducirla.</string>
     <string name="valorNoValido">Carácter no válido para su traducción:</string>
+    <string name="gestoDeLetra">Gesto de la letra</string>
+    <string name="tituloSobreNosotros">Sobre Nosotros</string>
+    <string name="enviarMensaje">Enviar Mensaje</string>
+    <string name="verMensajesEnviados">Ver mensajes enviados</string>
+    <string name="enviar">Enviar</string>
+    <string name="grabando">Grabando audio</string>
+    <string name="noPudeReproducirGrabacion">No se pudo reproducir la grabación: </string>
+    <string name="grabacionFinalizada">Grabación finalizada. Se han grabado</string>
+    <string name="reproduciendoGrabacion">Reproduciendo grabación</string>
+    <string name="pendienteDeImplementar">Esto es una futura mejora, disculpa las molestias.</string>
+    <string name="txtAyudanosAMejorar">¡Ayúdanos a mejorar! Por favor, envíanos cualquier sugerencia o duda que tengas acerca del programa, mediante un mensaje de texto, o mediante un audio. ¡Muchas gracias por colaborar!</string>
+    <string name="noPudeGrabar">No he podido grabar:</string>
+    <string name="segundos">segundos.</string>
 </resources>

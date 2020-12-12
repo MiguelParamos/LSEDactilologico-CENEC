@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/appicon_round"
         android:supportsRtl="true"
         android:theme="@style/CENECMalaga">
-        <activity android:name="es.cenecmalaga.lsedactilologico.actividades.AyudanosAMejorar"></activity>
+        <activity android:name="es.cenecmalaga.lsedactilologico.actividades.ActividadAyudanosAMejorar"></activity>
         <activity android:name="es.cenecmalaga.lsedactilologico.actividades.ActividadSobreNosotros" />
         <activity android:name="es.cenecmalaga.lsedactilologico.actividades.ActividadTraductor">
             <intent-filter>

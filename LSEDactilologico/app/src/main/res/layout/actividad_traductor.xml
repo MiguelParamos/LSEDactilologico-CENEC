@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:contentDescription="@string/app_name"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
         android:maxHeight="200dp"
         android:layout_marginHorizontal="30dp"
         android:src="@drawable/lsedactilologico_cenec"
@@ -24,18 +24,19 @@
 
     <TextView
         android:id="@+id/labelEscribeTexto"
+        style="@style/textViewGeneral.textViewActividad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/textoIntroduceATraducir"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/textViewGeneral.textViewActividad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
 
     <LinearLayout
         android:id="@+id/contenedorBuscador"
         android:layout_width="0dp"
-        android:layout_margin="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,6 +97,7 @@
         android:id="@+id/recyclerTraduccion"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/contenedorAboutAyuda"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

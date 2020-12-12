@@ -6,8 +6,9 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/fotoContribuidor"
+        android:id="@+id/imagenLetra"
         android:layout_width="114dp"
+        android:contentDescription="@string/gestoDeLetra"
         android:layout_height="132dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

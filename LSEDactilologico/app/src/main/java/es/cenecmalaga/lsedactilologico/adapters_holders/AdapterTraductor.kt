@@ -10,15 +10,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.NicolasFernandez.lsedactilologico.R
 import com.soepic.sefancytoast.FancyToast
 
-
-class RecyclerViewTraductorAdapter(val actividad: Activity, var datos: ArrayList<Char>): RecyclerView.Adapter<HolderTraductor>() {
-    /*
+/**
+ * Adapter del RecyclerView del traductor, donde se colocan las letras en LSE de la frase introducida
+ * @since 0.2
+ */
+class AdapterTraductor(val actividad: Activity, var datos: ArrayList<Char>): RecyclerView.Adapter<HolderTraductor>() {
+    /**
     Metodo que infla
-     */
+     **/
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderTraductor {
        return HolderTraductor(
            actividad.layoutInflater.inflate(
-               R.layout.elementos_recycle,
+               R.layout.elementos_recycle_traduccion,
                parent,
                false
            )
@@ -33,6 +36,10 @@ class RecyclerViewTraductorAdapter(val actividad: Activity, var datos: ArrayList
     override fun getItemCount(): Int {
         return datos.size
     }
+
+    /**
+     * Realiza la correspondencia entre letra e imágenes.
+     */
     override fun onBindViewHolder(holder: HolderTraductor, position: Int) {
         try {
 
@@ -66,6 +73,9 @@ class RecyclerViewTraductorAdapter(val actividad: Activity, var datos: ArrayList
         }
     }
 
+    /**
+     * función auxiliar, que obtiene un objeto drawable a partir del nombre del recurso.
+     */
     fun getDrawable(name: String?): Drawable? {
         val resourceId: Int = actividad.getResources()
             .getIdentifier(name, "drawable", actividad.getPackageName())

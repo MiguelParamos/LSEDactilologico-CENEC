@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorPrincipal"
+    android:layout_width="match_parent"
+    android:baselineAligned="false"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_gradiente_lista"
+    tools:context="es.cenecmalaga.lsedactilologico.actividades.ActividadAyudanosAMejorar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedorCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imagenLogo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginEnd="9dp"
+            android:contentDescription="@string/app_name"
+            android:maxHeight="200dp"
+            android:src="@drawable/lsedactilologico_cenec"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tituloAyudanosAMejorar"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:text="@string/ayudanos"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/txtAyudanosAMejorar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloAyudanosAMejorar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedorEnviarTexto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tituloEnviaMsgTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="@string/tituloMsgTexto"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/msgTexto"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="10dp"
+                android:autofillHints="@string/tituloMsgTexto"
+                android:background="@drawable/estilo_edittext"
+                android:ems="16"
+                android:gravity="start|top"
+                android:hint="@string/tituloMsgTexto"
+                android:inputType="textMultiLine"
+                android:maxHeight="100dp"
+                android:maxLength="1000"
+                android:padding="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/botonVerMensajes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tituloEnviaMsgTexto" />
+
+            <Button
+                android:id="@+id/botonEnviarMensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/estilo_botonazul_izda_abajo"
+                android:onClick="enviarMensajeTexto"
+                android:text="@string/enviarMensaje"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/msgTexto"
+                app:layout_constraintTop_toTopOf="@id/botonVerMensajes" />
+
+            <Button
+                android:id="@+id/botonVerMensajes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/estilo_botonamarillo_dcha_abajo"
+                android:onClick="verMensajesTextoEnviados"
+                android:text="@string/verMensajesEnviados"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/botonEnviarMensaje"
+                app:layout_constraintEnd_toEndOf="@+id/msgTexto"
+                app:layout_constraintStart_toEndOf="@+id/botonEnviarMensaje" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedorEnviarAudio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tituloEnviaGrabacion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/tituloGrabar"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/botonEnviarGrabacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/estilo_botonamarillo_dcha_arriba"
+                android:text="@string/enviar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/botonGrabar" />
+
+            <TextView
+                android:id="@+id/textoEnvianos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/envianos"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tituloEnviaGrabacion" />
+
+            <Button
+                android:id="@+id/botonGrabar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/estilo_botonazul_izda_arriba"
+                android:text="@string/grabar"
+                app:layout_constraintEnd_toStartOf="@+id/botonEnviarGrabacion"
+                app:layout_constraintTop_toBottomOf="@+id/textoEnvianos" />
+
+            <Button
+                android:id="@+id/botonReproducir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/estilo_botonazul_abajo"
+                android:text="@string/reproducir"
+                app:layout_constraintEnd_toEndOf="@+id/botonEnviarGrabacion"
+                app:layout_constraintStart_toStartOf="@+id/botonGrabar"
+                app:layout_constraintTop_toBottomOf="@+id/botonGrabar" />
+
+            <ImageView
+                android:id="@+id/imagenGrabando"
+                android:layout_width="112dp"
+                android:layout_height="159dp"
+                android:contentDescription="@string/grabar"
+                android:src="@drawable/micrec"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/botonGrabar"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoEnvianos" />
+
+            <ImageView
+                android:id="@+id/imagenReproduciendo"
+                android:layout_width="112dp"
+                android:layout_height="159dp"
+                android:contentDescription="@string/reproducir"
+                android:src="@drawable/speaker"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/botonGrabar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoEnvianos" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>

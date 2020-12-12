@@ -5,23 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/fotoContribuidor"
-        android:layout_width="133dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="5dp"
-        android:contentDescription="@string/descripcionFotoContribuidor"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fotoContributor"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/appicon"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreContribuidor"
-        app:srcCompat="@drawable/espacio" />
-
-    <TextView
-        android:id="@+id/nombreContribuidor"
-        android:layout_width="154dp"
-        android:layout_height="43dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/fotoContributor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fotoContributor"
+        app:layout_constraintTop_toTopOf="@+id/fotoContributor">
+
+        <TextView
+            android:id="@+id/nombreContributor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rolContributor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/contribucion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="13sp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

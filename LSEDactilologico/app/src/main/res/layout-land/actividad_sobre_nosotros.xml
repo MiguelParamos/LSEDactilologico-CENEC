@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_gradiente_lista"
+    tools:context="es.cenecmalaga.lsedactilologico.actividades.ActividadSobreNosotros">
+
+    <LinearLayout
+        android:id="@+id/lateralIzdo"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imagenLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:contentDescription="@string/app_name"
+            android:maxHeight="200dp"
+            android:src="@drawable/lsedactilologico_cenec" />
+
+        <TextView
+        android:id="@+id/tituloSobreNosotros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tituloSobreNosotros"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/txtSobreNosotros"
+ />
+
+        <TextView
+            android:id="@+id/contribuidoresSon"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtContribuidores"
+            android:textSize="18sp"
+            android:textAlignment="center"
+ />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaContribuidores"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>
